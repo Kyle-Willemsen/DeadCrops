@@ -10,7 +10,6 @@ public class CropButton : MonoBehaviour
     public Image cropImage;
     public float cost;
     public GameObject cardPrefab;
-    public Vector3 spawnPoint;
     public Transform mainArea;
 
 
@@ -21,10 +20,10 @@ public class CropButton : MonoBehaviour
 
     public void Purchase()
     {
-        if (cost < gameManager.currentCurrency)
+        if (cost <= gameManager.currentCurrency)
         {
         gameManager.currentCurrency -= cost;
-        Instantiate(cardPrefab, spawnPoint, Quaternion.identity, mainArea);
+            Instantiate(cardPrefab, mainArea.position, Quaternion.identity, mainArea);
         }
     }
 }

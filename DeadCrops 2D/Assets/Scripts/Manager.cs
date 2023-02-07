@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
 
     public void Update()
     {
-        tmProCurrency.text = "" + currentCurrency;
+        tmProCurrency.text = "$" + currentCurrency;
         if (currentCurrency <= 0)
         {
             currentCurrency = 0;
@@ -26,7 +26,6 @@ public class Manager : MonoBehaviour
 
     public void ReduceCurrency(float cost)
     {
-        Debug.Log("$20");
         currentCurrency -= cost;
     }
 }
