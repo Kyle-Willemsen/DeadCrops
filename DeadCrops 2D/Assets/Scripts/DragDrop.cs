@@ -12,8 +12,9 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     Vector3 originalScale;
     [HideInInspector] public Transform parentAfterDrag;
     public GameObject crop;
+    public GameObject weaponAbility;
     public bool stackable;
-    public Transform stackPosition;
+    //public Transform stackPosition;
 
 
     private void Start()

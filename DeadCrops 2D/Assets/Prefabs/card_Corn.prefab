@@ -94,6 +94,8 @@ MonoBehaviour:
   image2: {fileID: 5530104921084918982}
   parentAfterDrag: {fileID: 0}
   crop: {fileID: 6885181031862136013, guid: 760339356d2ae404ea2dc3e9f1e6e4bb, type: 3}
+  weaponAbility: {fileID: 6669426893545437470, guid: aea56ff5d9a5a70418b2410009cdd205, type: 3}
+  stackable: 0
 --- !u!1 &5244003670943028821
 GameObject:
   m_ObjectHideFlags: 0

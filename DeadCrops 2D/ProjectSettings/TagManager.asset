@@ -6,11 +6,14 @@ TagManager:
   tags:
   - Crops
   - Carrot
+  - Lawn
+  - Defenses
+  - Enemies
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemies
   - Water
   - UI
   - 
