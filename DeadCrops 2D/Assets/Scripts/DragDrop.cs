@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IDropHandler
+public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public Image image;
     public Image image2;
@@ -14,6 +14,7 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     public GameObject crop;
     public GameObject weaponAbility;
     public bool stackable;
+    public Vector3 worldPosition;
     //public Transform stackPosition;
 
 
@@ -24,10 +25,6 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         parentAfterDrag = transform.parent;
     }
 
-    //private void Update()
-    //{
-    //    Debug.Log(parentAfterDrag.transform);
-    //}
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -51,10 +48,5 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
         image2.raycastTarget = true;
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-
     }
 }

@@ -331,7 +331,7 @@ RectTransform:
   m_GameObject: {fileID: 6669426893545437470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.020494, y: 1.020494, z: 1.0204941}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3827530357181041373}
@@ -372,7 +372,7 @@ MonoBehaviour:
   bulletSpawn3: {fileID: 6669426892772135713}
   bulletSpawn4: {fileID: 6669426891753427079}
   force: 500
-  cornBullet: {fileID: 6154035240245689789, guid: 17be7be18a710134288709ced05034ad, type: 3}
+  cornBullet: {fileID: 7972922355876661210, guid: fb6219eca769f854f9b15858ceb22f61, type: 3}
 --- !u!1 &7131830593354366886
 GameObject:
   m_ObjectHideFlags: 0

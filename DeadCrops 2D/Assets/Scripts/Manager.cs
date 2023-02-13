@@ -9,12 +9,6 @@ public class Manager : MonoBehaviour
     public float currentCurrency;
     CropButton cropButton;
 
-
-    private void Start()
-    {
-
-    }
-
     public void Update()
     {
         tmProCurrency.text = "$" + currentCurrency;

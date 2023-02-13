@@ -13,12 +13,14 @@ public class PlantedCrop : MonoBehaviour
     public Image finishedImage;
     public Image cooldownImage;
 
+
     private void Start()
     {
         finishedImage.enabled = false;
         manager = FindObjectOfType<Manager>();
         cropIsReady = false;
         Grow();
+
     }
 
     public void Update()
@@ -32,11 +34,6 @@ public class PlantedCrop : MonoBehaviour
         {
             ResetTimer();
         }
-
-        //if (Input.GetKeyDown(KeyCode.Mouse0) && cropIsReady)
-        //{
-        //    Harvest();
-        //}
     }
 
     public void Grow()

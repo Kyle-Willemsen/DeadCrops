@@ -5,13 +5,12 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] Color baseColour, offsetColour;
-    [SerializeField] SpriteRenderer renderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameObject highlight;
-    [SerializeField] 
 
     public void Init(bool isOffset)
     {
-        renderer.color = isOffset ? offsetColour : baseColour;
+        spriteRenderer.color = isOffset ? offsetColour : baseColour;
     }
 
     private void OnMouseEnter()
@@ -31,9 +30,6 @@ public class Tile : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (gameObject.tag == "Lawn")
-        {
-            
-        }
+        
     }
 }

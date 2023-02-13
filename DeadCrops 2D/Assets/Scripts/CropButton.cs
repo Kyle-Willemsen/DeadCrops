@@ -13,16 +13,11 @@ public class CropButton : MonoBehaviour
     public Transform mainArea;
 
 
-    private void Start()
-    {
-
-    }
-
     public void Purchase()
     {
         if (cost <= gameManager.currentCurrency)
         {
-        gameManager.currentCurrency -= cost;
+            gameManager.currentCurrency -= cost;
             Instantiate(cardPrefab, mainArea.position, Quaternion.identity, mainArea);
         }
     }

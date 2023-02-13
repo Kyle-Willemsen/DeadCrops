@@ -94,7 +94,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
-  explosionImage: {fileID: 0}
 --- !u!1 &8511120937021503550
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +171,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
-  explosionImage: {fileID: 0}
 --- !u!222 &2136546498548754272
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -34,18 +34,11 @@ public class EnemyStats : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Collision");
         if (other.gameObject.tag == "Defenses")
         {
-            Debug.Log("Attack");
             currentSpeed = dontMove;
             other.GetComponent<DefenseStats>().TakeDamage(damage);
         }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        Debug.Log("Collider");
     }
 
     public void OnTriggerExit2D(Collider2D collision)

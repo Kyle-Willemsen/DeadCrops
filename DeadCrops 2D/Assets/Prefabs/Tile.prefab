@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseColour: {r: 0.2979148, g: 0.6226415, b: 0.22614807, a: 1}
   offsetColour: {r: 0.20309325, g: 0.5188679, b: 0.13461196, a: 1}
-  renderer: {fileID: 7375593910865348502}
+  spriteRenderer: {fileID: 0}
   highlight: {fileID: 1984535081018674935}
 --- !u!61 &5885382761290153088
 BoxCollider2D:

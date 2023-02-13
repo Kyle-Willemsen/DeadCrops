@@ -9,6 +9,7 @@ TagManager:
   - Lawn
   - Defenses
   - Enemies
+  - UI
   layers:
   - Default
   - TransparentFX

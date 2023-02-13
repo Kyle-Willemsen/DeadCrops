@@ -12,17 +12,25 @@ public class CornExplosion : MonoBehaviour
     public GameObject cornBullet;
 
 
-
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            var currentBullet = 
-            Instantiate(cornBullet, bulletSpawn1.position, bulletSpawn1.rotation);
-            Instantiate(cornBullet, bulletSpawn2.position, bulletSpawn2.rotation);
-            Instantiate(cornBullet, bulletSpawn3.position, bulletSpawn3.rotation);
-            Instantiate(cornBullet, bulletSpawn4.position, bulletSpawn4.rotation);
-        }
+        Shoot();
+    }
+
+    private void ResetShot()
+    {
+        Invoke("Shoot", 2);
+    }
+
+
+    private void Shoot()
+    {
+        var currentBullet =
+        Instantiate(cornBullet, bulletSpawn1.position, bulletSpawn1.rotation);
+        Instantiate(cornBullet, bulletSpawn2.position, bulletSpawn2.rotation);
+        Instantiate(cornBullet, bulletSpawn3.position, bulletSpawn3.rotation);
+        Instantiate(cornBullet, bulletSpawn4.position, bulletSpawn4.rotation);
+        ResetShot();
     }
 
     
