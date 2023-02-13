@@ -11,6 +11,11 @@ public class cornBullet : MonoBehaviour
     GameObject UI;
     DragDrop dragdrop;
     //public Rigidbody2D rb;
+
+    public float collisionRadius;
+    public LayerMask layermask;
+
+
     private void Start()
     {
         Destroy(gameObject, 5);
@@ -29,6 +34,23 @@ public class cornBullet : MonoBehaviour
     private void Shoot()
     {
         transform.position += speed * Time.deltaTime * transform.up;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, collisionRadius, layermask);
+
+        foreach (Collider2D col in colliders)
+        {
+            if (col.GetComponent<EnemyStats>())
+            {
+                col.GetComponent<EnemyStats>().TakeDamage(damage);
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, collisionRadius);
     }
 
     private void OnCollisionEnter(Collision collision)

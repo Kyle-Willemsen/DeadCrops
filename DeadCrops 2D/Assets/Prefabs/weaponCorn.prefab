@@ -373,6 +373,9 @@ MonoBehaviour:
   bulletSpawn4: {fileID: 6669426891753427079}
   force: 500
   cornBullet: {fileID: 7972922355876661210, guid: fb6219eca769f854f9b15858ceb22f61, type: 3}
+  resetShot: 0.3
+  bulletCount: 3
+  canShoot: 1
 --- !u!1 &7131830593354366886
 GameObject:
   m_ObjectHideFlags: 0
