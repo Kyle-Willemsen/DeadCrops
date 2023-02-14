@@ -8,12 +8,24 @@ public class TomatoExplosion : MonoBehaviour
     public float explodeRadius;
     public float damage;
     public LayerMask layerMask;
+    public bool tomato;
+    public bool pumpkin;
+    public GameObject crackedPumpkin;
+    public GameObject pumpkinImage;
+
 
 
     public void Explode()
     {
         CheckforEnemies();
-        Destroy(gameObject, 0.1f);
+        if (tomato)
+        {
+            Destroy(gameObject, 0.1f);
+        }
+        if (pumpkin)
+        {
+            Destroy(gameObject, 0.2f);
+        }
 
     }
     public void CheckforEnemies()
@@ -32,5 +44,11 @@ public class TomatoExplosion : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explodeRadius);
+    }
+
+    public void CrackedPump()
+    {
+        pumpkinImage.SetActive(false);
+        crackedPumpkin.SetActive(true);
     }
 }

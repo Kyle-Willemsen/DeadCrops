@@ -10,6 +10,9 @@ TagManager:
   - Defenses
   - Enemies
   - UI
+  - House
+  - WeaponSlots
+  - Weapons
   layers:
   - Default
   - TransparentFX
@@ -17,8 +20,8 @@ TagManager:
   - Enemies
   - Water
   - UI
-  - 
-  - 
+  - House
+  - Defenses
   - 
   - 
   - 

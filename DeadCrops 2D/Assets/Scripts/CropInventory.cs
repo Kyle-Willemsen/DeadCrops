@@ -13,9 +13,9 @@ public class CropInventory : MonoBehaviour, IDropHandler
     {
         droppedCard = eventData.pointerDrag;
         dragDrop = droppedCard.GetComponent<DragDrop>();
-        if (transform.parent.tag == "Crops" && transform.childCount == 0)
-        {
 
+        if (transform.parent.tag == "Crops" && transform.childCount == 0 && dragDrop.growable)
+        {
             dragDrop.parentAfterDrag = transform;
             Instantiate(dragDrop.crop, dragDrop.parentAfterDrag.transform);
             dragDrop.gameObject.SetActive(false);

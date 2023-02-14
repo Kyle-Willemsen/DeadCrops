@@ -16,6 +16,7 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     public bool stackable;
     public Vector3 worldPosition;
     //public Transform stackPosition;
+    public bool growable;
 
 
     private void Start()
