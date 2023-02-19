@@ -155,8 +155,8 @@ MonoBehaviour:
     m_Bits: 8
   tomato: 1
   pumpkin: 0
-  crackedPumpkin: {fileID: 0}
-  pumpkinImage: {fileID: 0}
+  crackedPumpkin: {fileID: 8511120937021503550}
+  pumpkinImage: {fileID: 8511120937021503550}
 --- !u!222 &2136546498548754272
 CanvasRenderer:
   m_ObjectHideFlags: 0

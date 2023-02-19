@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour
     public GameObject pauseScreen;
     bool isPaused;
     public GameObject loseScreen;
+    public GameObject winScreen;
 
 
 

@@ -92,7 +92,7 @@ MonoBehaviour:
   image: {fileID: 4675684013441581278}
   image2: {fileID: 4675684013441581278}
   parentAfterDrag: {fileID: 0}
-  crop: {fileID: 8242209740357018513, guid: 2c9e5086a040a754cb5e371691eac233, type: 3}
+  crop: {fileID: 0}
   weaponAbility: {fileID: 0}
   stackable: 0
   worldPosition: {x: 0, y: 0, z: 0}

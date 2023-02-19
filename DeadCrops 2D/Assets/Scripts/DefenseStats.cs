@@ -34,14 +34,14 @@ public class DefenseStats : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        StartCoroutine(FlashMaterial());
+        //StartCoroutine(FlashMaterials());
     }
 
-    private IEnumerator FlashMaterial()
-    {
-        image.material = flashMat;
-
-        yield return new WaitForSeconds(flashDuration);
-        image.material = originalMat;
-    }
+    //private IEnumerator FlashMaterials()
+    //{
+    //    image.material = flashMat;
+    //
+    //    yield return new WaitForSeconds(flashDuration);
+    //    image.material = originalMat;
+    //}
 }

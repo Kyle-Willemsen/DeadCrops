@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1845414771306625585}
   - component: {fileID: 8460096614356760155}
   m_Layer: 3
-  m_Name: Zombie Basic
+  m_Name: Zombie Fast
   m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   enemyHealth: 100
   enemyCurrentHealth: 0
   damage: 20
-  basicZombieSpeed: 30
+  basicZombieSpeed: 40
   currentSpeed: 0
   dontMove: 0
   detectionRadius: 45
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87d99a0cabd369446bfc4ef9f0845dbb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d54dc703292cfb47883d66a6833312f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -13,10 +13,11 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     [HideInInspector] public Transform parentAfterDrag;
     public GameObject crop;
     public GameObject weaponAbility;
-    public bool stackable;
-    public Vector3 worldPosition;
+    //public bool stackable;
+    //public Vector3 worldPosition;
     //public Transform stackPosition;
     public bool growable;
+
 
 
     private void Start()
@@ -50,4 +51,5 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         image.raycastTarget = true;
         image2.raycastTarget = true;
     }
+
 }
