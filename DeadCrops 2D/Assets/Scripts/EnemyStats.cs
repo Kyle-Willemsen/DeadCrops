@@ -23,12 +23,14 @@ public class EnemyStats : MonoBehaviour
     private Material originalMat;
     public float flashDuration;
     EnemyHealthBar healthBar;
+    EnemySpawner enemySpawner;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        enemySpawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
         healthBar = GetComponent<EnemyHealthBar>();
         image = GetComponent<Image>();
         originalMat = image.material;
@@ -45,8 +47,10 @@ public class EnemyStats : MonoBehaviour
         transform.position += -transform.right * currentSpeed * Time.deltaTime;
         currentSpeed = basicZombieSpeed;
 
+
         if (enemyCurrentHealth <= 0)
         {
+            enemySpawner.enemyCounter--;
             Destroy(gameObject);
         }
 
@@ -56,7 +60,8 @@ public class EnemyStats : MonoBehaviour
             if (col.GetComponent<House>())
             {
                 col.GetComponent<House>().TakeALife(1);
-                Destroy(gameObject)
+                Destroy(gameObject);
+                enemySpawner.enemyCounter--;
 ;           }
 
             if (col.GetComponent<DefenseStats>())

@@ -91,10 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf501e79adca7ae40beca7f7f8240d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growTime: 5
+  growTime: 4
   growtimer: 0
   cropIsReady: 0
-  cropRevenue: 50
+  cropRevenue: 15
   finishedImage: {fileID: 5430908583190383896}
   cooldownImage: {fileID: 5367451587776990175}
 --- !u!114 &4253298257755678754

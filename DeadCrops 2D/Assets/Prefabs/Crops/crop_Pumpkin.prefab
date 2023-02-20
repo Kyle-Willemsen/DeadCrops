@@ -95,7 +95,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8242209740357018526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -167,10 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf501e79adca7ae40beca7f7f8240d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growTime: 16
+  growTime: 18
   growtimer: 0
   cropIsReady: 0
-  cropRevenue: 100
+  cropRevenue: 75
   finishedImage: {fileID: 8242209740357018524}
   cooldownImage: {fileID: 4040028767253993389}
 --- !u!114 &5467883035047372089

@@ -8,18 +8,18 @@ public class DefenseStats : MonoBehaviour
     public float health;
     public float currentHealth;
 
-    Image image;
-    public Material flashMat;
-    private Material originalMat;
-    public float flashDuration;
+   //Image image;
+   //public Material flashMat;
+   //private Material originalMat;
+   //public float flashDuration;
 
 
     private void Start()
     {
         currentHealth = health;
-        image = GetComponent<Image>();
-        originalMat = image.material;
-        flashMat = new Material(flashMat);
+        //image = GetComponent<Image>();
+        //originalMat = image.material;
+        //flashMat = new Material(flashMat);
 
     }
 
