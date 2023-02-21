@@ -130,7 +130,7 @@ MonoBehaviour:
   enemyHealth: 250
   enemyCurrentHealth: 0
   damage: 25
-  basicZombieSpeed: 20
+  originalSpeed: 10
   currentSpeed: 0
   dontMove: 0
   detectionRadius: 45

@@ -16,10 +16,12 @@ public class DayNightCycle : MonoBehaviour
     public bool dayOver;
     public float currentDay;
     public TextMeshProUGUI day;
+    public bool endOfDay;
 
 
     public void Start()
     {
+        endOfDay = false;
         enemySpawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
         slider.SetMax(timeInDay);
         dayOver = false;
@@ -73,6 +75,7 @@ public class DayNightCycle : MonoBehaviour
         //enemySpawner.canSpawn = false;
         winScreen.SetActive(true);
         Time.timeScale = 0;
+        endOfDay = true;
     }
     public void NewDay()
     {
@@ -85,5 +88,6 @@ public class DayNightCycle : MonoBehaviour
         currentTime = 0;
         dayOver = false;
         slider.SetMax(timeInDay);
+        endOfDay = false;
     }
 }

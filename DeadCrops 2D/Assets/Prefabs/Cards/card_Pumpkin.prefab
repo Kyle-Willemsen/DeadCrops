@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 3015868454656356840}
   m_Layer: 5
   m_Name: card_Pumpkin
-  m_TagString: Untagged
+  m_TagString: StackableCard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,6 +171,4 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   crop: {fileID: 8242209740357018513, guid: 2c9e5086a040a754cb5e371691eac233, type: 3}
   weaponAbility: {fileID: 4011072414201510247, guid: d80e62fb629f1254da122730335e0bc2, type: 3}
-  stackable: 0
-  worldPosition: {x: 0, y: 0, z: 0}
   growable: 1

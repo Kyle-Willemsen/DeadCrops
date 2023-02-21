@@ -28,6 +28,7 @@ public class CropInventory : MonoBehaviour, IDropHandler
             Instantiate(dragDrop.weaponAbility, dragDrop.parentAfterDrag.transform);
             Destroy(dragDrop.gameObject);
         }
+        
         return;
     }
  

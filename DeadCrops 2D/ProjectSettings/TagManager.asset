@@ -14,6 +14,7 @@ TagManager:
   - WeaponSlots
   - Weapons
   - Draggable
+  - StackableCard
   layers:
   - Default
   - TransparentFX

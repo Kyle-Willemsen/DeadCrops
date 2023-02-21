@@ -10,14 +10,17 @@ public class PlantedCrop : MonoBehaviour
     public bool cropIsReady;
     public float cropRevenue;
     Manager manager;
+    DayNightCycle cycle;
     public Image finishedImage;
     public Image cooldownImage;
+    
 
 
     private void Start()
     {
         finishedImage.enabled = false;
         manager = FindObjectOfType<Manager>();
+        cycle = FindObjectOfType<DayNightCycle>();
         cropIsReady = false;
         Grow();
 
@@ -34,6 +37,12 @@ public class PlantedCrop : MonoBehaviour
         {
             ResetTimer();
         }
+        if (cycle.endOfDay == true)
+        {
+            cropIsReady=true;
+            Harvest();
+        }
+
     }
 
     public void Grow()

@@ -10,7 +10,7 @@ public class EnemyStats : MonoBehaviour
 
     public float damage;
 
-    public float basicZombieSpeed;
+    public float originalSpeed;
     public float currentSpeed;
     public float dontMove;
 
@@ -25,18 +25,23 @@ public class EnemyStats : MonoBehaviour
     EnemyHealthBar healthBar;
     EnemySpawner enemySpawner;
 
+    public bool canJump;
+    public Animator anim;
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //anim = GetComponent<Animator>();
         enemySpawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
         healthBar = GetComponent<EnemyHealthBar>();
         image = GetComponent<Image>();
         originalMat = image.material;
         canAttack = true;
         enemyCurrentHealth = enemyHealth;
-        currentSpeed = basicZombieSpeed;
+        currentSpeed = originalSpeed;
         flashMat = new Material(flashMat);
         healthBar.SetMaxHealth(enemyHealth);
     }
@@ -45,7 +50,7 @@ public class EnemyStats : MonoBehaviour
     void Update()
     {
         transform.position += -transform.right * currentSpeed * Time.deltaTime;
-        currentSpeed = basicZombieSpeed;
+        currentSpeed = originalSpeed;
 
 
         if (enemyCurrentHealth <= 0)
@@ -73,6 +78,10 @@ public class EnemyStats : MonoBehaviour
                     col.GetComponent<DefenseStats>().TakeDamage(damage);
                     Invoke("ResetAttack", 2f);
                 }
+                if (canJump)
+                {
+                    anim.SetBool("Jump", true);
+                }
             }
         }
     }
@@ -93,6 +102,12 @@ public class EnemyStats : MonoBehaviour
         enemyCurrentHealth -= damage;
         StartCoroutine(FlashMaterial());
         healthBar.SetHealth(enemyCurrentHealth);
+    }
+
+    public void SlowEnemy(float slowSpeed)
+    {
+
+        currentSpeed = slowSpeed;
     }
 
     private IEnumerator FlashMaterial()

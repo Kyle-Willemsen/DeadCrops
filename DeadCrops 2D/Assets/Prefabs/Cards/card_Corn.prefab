@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5333874424486066388}
   m_Layer: 5
   m_Name: card_Corn
-  m_TagString: Untagged
+  m_TagString: StackableCard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +95,6 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   crop: {fileID: 6885181031862136013, guid: 760339356d2ae404ea2dc3e9f1e6e4bb, type: 3}
   weaponAbility: {fileID: 6669426893545437470, guid: aea56ff5d9a5a70418b2410009cdd205, type: 3}
-  stackable: 0
-  worldPosition: {x: 0, y: 0, z: 0}
   growable: 1
 --- !u!1 &5244003670943028821
 GameObject:
