@@ -221,6 +221,9 @@ MonoBehaviour:
   flashDuration: 0.1
   canJump: 0
   anim: {fileID: 3929680337081949464}
+  chiliWeapon: {fileID: 0}
+  tickDamage: 10
+  tickCounter: 4
 --- !u!61 &7565450872713640122
 BoxCollider2D:
   m_ObjectHideFlags: 0

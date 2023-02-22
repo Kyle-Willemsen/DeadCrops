@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 5567042393515031800}
   m_Layer: 5
   m_Name: crop_Corn
-  m_TagString: Untagged
+  m_TagString: PlantedCrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,12 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf501e79adca7ae40beca7f7f8240d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growTime: 11
+  growTime: 25
   growtimer: 0
   cropIsReady: 0
-  cropRevenue: 50
+  cropRevenue: 190
   finishedImage: {fileID: 6885181031862136000}
   cooldownImage: {fileID: 3035923232701227050}
+  harvestAllButton: 0
 --- !u!114 &5567042393515031800
 MonoBehaviour:
   m_ObjectHideFlags: 0

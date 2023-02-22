@@ -130,7 +130,7 @@ MonoBehaviour:
   enemyHealth: 100
   enemyCurrentHealth: 0
   damage: 20
-  originalSpeed: 15
+  originalSpeed: 18
   currentSpeed: 0
   dontMove: 0
   detectionRadius: 45
@@ -139,6 +139,11 @@ MonoBehaviour:
     m_Bits: 200
   flashMat: {fileID: 2100000, guid: 69b33dd25311e64408f63d1a3ff3d135, type: 2}
   flashDuration: 0.1
+  canJump: 0
+  anim: {fileID: 0}
+  chiliWeapon: {fileID: 0}
+  tickDamage: 10
+  tickCounter: 4
 --- !u!61 &1845414771306625587
 BoxCollider2D:
   m_ObjectHideFlags: 0

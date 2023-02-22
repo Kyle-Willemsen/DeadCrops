@@ -20,6 +20,7 @@ public class EnemySpawner : MonoBehaviour
     public float enemyCounter;
 
 
+
     private void Start()
     {
         spawnCounter = spawnTime;
@@ -38,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
         int randomEnemy = Random.Range(0, enemyTypeCounter);
         int randomSpawn = Random.Range(0, 5);
 
-        if (spawnCounter <= 0 && dayNight.dayOver == false && canSpawn)
+        if (spawnCounter <= 0 && dayNight.dayOver == false && canSpawn && dayNight.initialSpawnCounter == 0)
         {
             enemyCounter++;
             Instantiate(enemyList[randomEnemy], spawners[randomSpawn].gameObject.transform.position, 

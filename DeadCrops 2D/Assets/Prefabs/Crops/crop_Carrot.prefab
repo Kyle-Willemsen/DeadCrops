@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 8602087609510645975}
   m_Layer: 5
   m_Name: crop_Carrot
-  m_TagString: Untagged
+  m_TagString: PlantedCrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,12 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf501e79adca7ae40beca7f7f8240d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growTime: 7
+  growTime: 19
   growtimer: 0
   cropIsReady: 0
-  cropRevenue: 35
+  cropRevenue: 95
   finishedImage: {fileID: 9170044326792646964}
   cooldownImage: {fileID: 1276109862463319753}
+  harvestAllButton: 0
 --- !u!114 &8602087609510645975
 MonoBehaviour:
   m_ObjectHideFlags: 0

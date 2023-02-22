@@ -170,5 +170,5 @@ MonoBehaviour:
   image2: {fileID: 1360109439898182598}
   parentAfterDrag: {fileID: 0}
   crop: {fileID: 4547293191684831527, guid: fe792db2e10a0274c92442292f0057bd, type: 3}
-  weaponAbility: {fileID: 0}
+  weaponAbility: {fileID: 9108387583224795926, guid: 17b2d2cb93048d9468cb3e1d04313eb3, type: 3}
   growable: 1

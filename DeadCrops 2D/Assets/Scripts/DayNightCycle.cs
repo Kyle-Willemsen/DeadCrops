@@ -18,9 +18,13 @@ public class DayNightCycle : MonoBehaviour
     public TextMeshProUGUI day;
     public bool endOfDay;
 
+    public float initialSpawnTime;
+    public float initialSpawnCounter;
+
 
     public void Start()
     {
+        initialSpawnCounter = initialSpawnTime;
         endOfDay = false;
         enemySpawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
         slider.SetMax(timeInDay);
@@ -67,6 +71,14 @@ public class DayNightCycle : MonoBehaviour
             enemySpawner.enemyTypeCounter = 14;
         }
 
+       
+        
+            initialSpawnCounter = initialSpawnCounter -1 * Time.deltaTime;
+            if (initialSpawnCounter <= 0)
+            {
+                initialSpawnCounter = 0;
+            }
+        
     }
 
     public void DayOver()
@@ -76,6 +88,7 @@ public class DayNightCycle : MonoBehaviour
         winScreen.SetActive(true);
         Time.timeScale = 0;
         endOfDay = true;
+        
     }
     public void NewDay()
     {
@@ -89,5 +102,7 @@ public class DayNightCycle : MonoBehaviour
         dayOver = false;
         slider.SetMax(timeInDay);
         endOfDay = false;
+        manager.currentCurrency += 20;
+        initialSpawnCounter = initialSpawnTime;
     }
 }

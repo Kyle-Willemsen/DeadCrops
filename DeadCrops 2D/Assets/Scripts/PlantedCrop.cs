@@ -13,7 +13,7 @@ public class PlantedCrop : MonoBehaviour
     DayNightCycle cycle;
     public Image finishedImage;
     public Image cooldownImage;
-    
+    public bool harvestAllButton;
 
 
     private void Start()
@@ -39,7 +39,11 @@ public class PlantedCrop : MonoBehaviour
         }
         if (cycle.endOfDay == true)
         {
-            cropIsReady=true;
+            cropIsReady = true;
+            Harvest();
+        }
+        if (harvestAllButton)
+        {
             Harvest();
         }
 
@@ -55,9 +59,9 @@ public class PlantedCrop : MonoBehaviour
     {
         if (cropIsReady)
         {
-            cropIsReady = false;
             manager.currentCurrency += cropRevenue;
             Destroy(gameObject);
+            cropIsReady = false;
         }
 
     }

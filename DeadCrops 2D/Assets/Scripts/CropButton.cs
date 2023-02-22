@@ -14,11 +14,14 @@ public class CropButton : MonoBehaviour
     public Transform weaponSlots;
     private float maxWeaponSlots = 3;
     public float currentWeaponSlot;
+    Vector3 randomSpawn;
 
 
     private void Start()
     {
+        randomSpawn = new Vector3(Random.Range(650, 1250), Random.Range(300, 100), 0);
     }
+
     public void Purchase()
     {
         if (cost <= gameManager.currentCurrency)
@@ -34,7 +37,7 @@ public class CropButton : MonoBehaviour
             else if (gameObject.tag == "Draggable")
             {
                 gameManager.currentCurrency -= cost;
-                Instantiate(cardPrefab, mainArea.position, Quaternion.identity, mainArea);
+                Instantiate(cardPrefab, randomSpawn, Quaternion.identity, mainArea);
             }
 
         }

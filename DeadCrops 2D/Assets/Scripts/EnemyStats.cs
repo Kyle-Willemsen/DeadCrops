@@ -24,10 +24,13 @@ public class EnemyStats : MonoBehaviour
     public float flashDuration;
     EnemyHealthBar healthBar;
     EnemySpawner enemySpawner;
+    DayNightCycle dayNightCycle;
 
     public bool canJump;
     public Animator anim;
-
+    public ChiliWeapon chiliWeapon;
+    public float tickDamage;
+    public float tickCounter;
 
 
 
@@ -36,6 +39,7 @@ public class EnemyStats : MonoBehaviour
     {
         //anim = GetComponent<Animator>();
         enemySpawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
+        dayNightCycle = GameObject.Find("GameManager").GetComponent<DayNightCycle>();
         healthBar = GetComponent<EnemyHealthBar>();
         image = GetComponent<Image>();
         originalMat = image.material;
@@ -52,6 +56,18 @@ public class EnemyStats : MonoBehaviour
         transform.position += -transform.right * currentSpeed * Time.deltaTime;
         currentSpeed = originalSpeed;
 
+        if (dayNightCycle.currentDay <= 5)
+        {
+            currentSpeed += 2;
+        }
+        if (dayNightCycle.currentDay <= 10)
+        {
+            currentSpeed += 2;
+        }
+        if (dayNightCycle.currentDay <= 15)
+        {
+            currentSpeed += 2;
+        }
 
         if (enemyCurrentHealth <= 0)
         {
@@ -102,6 +118,27 @@ public class EnemyStats : MonoBehaviour
         enemyCurrentHealth -= damage;
         StartCoroutine(FlashMaterial());
         healthBar.SetHealth(enemyCurrentHealth);
+        //if (chiliWeapon.tickCounter == 1)
+        //{
+           // enemyCurrentHealth -= chiliWeapon.tickDamage;
+        //}
+    }
+
+    public void TickTimer()
+    {
+
+        Tick();
+    }
+
+    public void Tick()
+    {
+        if (tickCounter > 0)
+        {
+            TakeDamage(tickDamage);
+        }
+        tickCounter--;
+
+        Invoke("TickTimer", 2);
     }
 
     public void SlowEnemy(float slowSpeed)

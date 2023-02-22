@@ -15,6 +15,7 @@ TagManager:
   - Weapons
   - Draggable
   - StackableCard
+  - PlantedCrop
   layers:
   - Default
   - TransparentFX
