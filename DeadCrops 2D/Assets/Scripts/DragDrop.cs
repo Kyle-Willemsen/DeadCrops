@@ -17,14 +17,30 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     //public Vector3 worldPosition;
     //public Transform stackPosition;
     public bool growable;
+    public GameObject backside;
+    private bool backsideActive;
 
 
 
     private void Start()
     {
-        originalScale = new Vector3(1, 1, 1);
-        dragScale = new Vector3(1.1f, 1.1f, 1.1f);
+        originalScale = new Vector3(1.2f, 1.2f, 1.2f);
+        dragScale = new Vector3(1.3f, 1.3f, 1.3f);
         parentAfterDrag = transform.parent;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !backsideActive)
+        {
+            backside.SetActive(true);
+            backsideActive = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse1) && backsideActive)
+        {
+            backside.SetActive(false);
+            backsideActive = false;
+        }
     }
 
 

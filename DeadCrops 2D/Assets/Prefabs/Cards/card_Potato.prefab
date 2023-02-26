@@ -104,7 +104,7 @@ RectTransform:
   m_GameObject: {fileID: 6194003888777395002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.4295092}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3052361370575648451}
@@ -172,3 +172,4 @@ MonoBehaviour:
   crop: {fileID: 4547293191684831527, guid: fe792db2e10a0274c92442292f0057bd, type: 3}
   weaponAbility: {fileID: 9108387583224795926, guid: 17b2d2cb93048d9468cb3e1d04313eb3, type: 3}
   growable: 1
+  backside: {fileID: 0}
