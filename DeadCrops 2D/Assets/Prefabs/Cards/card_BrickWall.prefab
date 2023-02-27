@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 9071544680660543838}
-  image2: {fileID: 9071544680660543838}
+  image2: {fileID: 3206809624150198734}
   parentAfterDrag: {fileID: 0}
   crop: {fileID: 9160260381663710442}
   weaponAbility: {fileID: 5273641936971887407, guid: 3b29c2c2013bfac4cbabfd45ca0a5744, type: 3}

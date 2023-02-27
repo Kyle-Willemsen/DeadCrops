@@ -133,7 +133,7 @@ MonoBehaviour:
   originalSpeed: 32
   currentSpeed: 0
   dontMove: 0
-  detectionRadius: 45
+  detectionRadius: 30
   layerMask:
     serializedVersion: 2
     m_Bits: 200

@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour
     public GameObject pauseScreen;
     bool isPaused;
     public GameObject loseScreen;
+    public DayNightCycle dayNight;
 
 
 
@@ -55,6 +56,7 @@ public class Manager : MonoBehaviour
     {
         Time.timeScale = 0;
         loseScreen.SetActive(true);
+        dayNight.winScreen.SetActive(false);
     }
 
     public void ReduceCurrency(float cost)

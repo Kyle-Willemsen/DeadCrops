@@ -35,7 +35,7 @@ public class DayNightCycle : MonoBehaviour
 
     private void Update()
     {
-        day.text = "Day:" + currentDay;
+        day.text = "Day: " + currentDay;
         currentTime = currentTime + 1 * Time.deltaTime;
         slider.SetCurrent(currentTime);
        
