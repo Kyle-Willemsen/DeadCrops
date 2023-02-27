@@ -21,6 +21,8 @@ public class DayNightCycle : MonoBehaviour
     public float initialSpawnTime;
     public float initialSpawnCounter;
 
+    public float endOfDayEarlings;
+
 
     public void Start()
     {
@@ -57,18 +59,21 @@ public class DayNightCycle : MonoBehaviour
             enemySpawner.maxSpawnTime = 8;
             enemySpawner.minSpawntime = 3;
             enemySpawner.enemyTypeCounter = 6;
+            endOfDayEarlings = 50;
         }
         if (currentDay >= 10)
         {
             enemySpawner.maxSpawnTime = 8;
             enemySpawner.minSpawntime = 0;
             enemySpawner.enemyTypeCounter = 9;
+            endOfDayEarlings = 100;
         }
         if (currentDay >= 15)
         {
             enemySpawner.maxSpawnTime = 5;
             enemySpawner.minSpawntime = 0;
             enemySpawner.enemyTypeCounter = 14;
+            endOfDayEarlings = 150;
         }
 
        
@@ -102,7 +107,7 @@ public class DayNightCycle : MonoBehaviour
         dayOver = false;
         slider.SetMax(timeInDay);
         endOfDay = false;
-        manager.currentCurrency += 20;
         initialSpawnCounter = initialSpawnTime;
+        manager.currentCurrency += endOfDayEarlings;
     }
 }
