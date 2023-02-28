@@ -9,7 +9,7 @@ public class PiercingCarrot : MonoBehaviour
     public float collisionRadius;
     public LayerMask layermask;
     public bool canApplyDamage;
-
+    public GameObject parent;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class PiercingCarrot : MonoBehaviour
     private void Update()
     {
         Shoot();
-        Destroy(gameObject, 1.2f);
+        Destroy(parent, 1.2f);
     }
 
 

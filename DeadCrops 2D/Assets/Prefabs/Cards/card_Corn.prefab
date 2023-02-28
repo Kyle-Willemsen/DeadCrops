@@ -762,7 +762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sell $230
+  m_text: Sell $215
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2044e9a8ff576164f93841e2ce9a8be2, type: 2}
   m_sharedMaterial: {fileID: -7788049925186936850, guid: 2044e9a8ff576164f93841e2ce9a8be2, type: 2}

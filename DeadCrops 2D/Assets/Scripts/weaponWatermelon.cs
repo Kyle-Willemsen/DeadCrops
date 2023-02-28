@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class weaponWatermelon : MonoBehaviour
 {
@@ -10,17 +11,24 @@ public class weaponWatermelon : MonoBehaviour
     public LayerMask layerMask;
     //Animator anim;
     public GameObject roller;
+    public GameObject parent;
+
 
     private void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(parent, 3);
         //anim = GetComponent<Animator>();
         //anim.Play("WatermelonRoll");
     }
 
     private void Update()
     {
-        roller.transform.Rotate(0, 0, -100 * Time.deltaTime, Space.Self);// * Time.deltaTime;
+        Roll();
+    }
+
+    public void Roll()
+    {
+        roller.transform.Rotate(0, 0, -100 * Time.deltaTime, Space.Self);
         waterDamage += 50 * Time.deltaTime;
         rollSpeed += 200 * Time.deltaTime;
 
@@ -32,10 +40,10 @@ public class weaponWatermelon : MonoBehaviour
             if (col.GetComponent<EnemyStats>())
             {
                 col.GetComponent<EnemyStats>().TakeDamage(waterDamage);
-                Destroy(gameObject);
-                //startTimer = true;
+                Destroy(parent);
             }
         }
+
     }
 
     private void OnDrawGizmos()

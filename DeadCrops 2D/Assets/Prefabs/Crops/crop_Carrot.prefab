@@ -170,7 +170,7 @@ MonoBehaviour:
   growTime: 21
   growtimer: 0
   cropIsReady: 0
-  cropRevenue: 115
+  cropRevenue: 105
   finishedImage: {fileID: 9170044326792646964}
   cooldownImage: {fileID: 1276109862463319753}
   harvestAllButton: 0

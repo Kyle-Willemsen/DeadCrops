@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class House : MonoBehaviour
 {
@@ -21,11 +22,7 @@ public class House : MonoBehaviour
         lives.text = "Lives:  " + currentAmountOfLives;
         if (currentAmountOfLives <= 0)
         {
-            manager.LoseScreen();
-        }
-        else
-        {
-            //manager.ResetGame();
+            SceneManager.LoadScene("Lose Screen");
         }
     }
     public void TakeALife(float life)

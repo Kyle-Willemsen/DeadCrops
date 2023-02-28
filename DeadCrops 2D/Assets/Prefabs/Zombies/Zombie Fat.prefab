@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 300
   enemyCurrentHealth: 0
-  damage: 25
+  damage: 35
   originalSpeed: 8
   currentSpeed: 0
   dontMove: 0

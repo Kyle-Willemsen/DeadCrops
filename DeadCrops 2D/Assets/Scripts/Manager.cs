@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Manager : MonoBehaviour
 {
@@ -51,22 +52,14 @@ public class Manager : MonoBehaviour
         pauseScreen.SetActive(false);
         isPaused = false;
     }
-
-    public void LoseScreen()
-    {
-        Time.timeScale = 0;
-        loseScreen.SetActive(true);
-        dayNight.winScreen.SetActive(false);
-    }
-
     public void ReduceCurrency(float cost)
     {
         currentCurrency -= cost;
     }
 
-    public void ResetGame()
+    public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level");
     }
 
     public void ExitGame()
